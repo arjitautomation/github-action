@@ -31,8 +31,14 @@ jobs:
     - name: present working directoty
       run: pwd
     
-    - name: present working directoty
+    - name: list files in present working directory
       run: ls
+    
+    - name: uploading artifacts for download
+      uses: actions/upload-artifacts@v2
+      with:
+        name: gradle_artifacts
+        path: downloads
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
