@@ -38,8 +38,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: gradle_artifacts
-        path: github-action/build/libs/*.jar
-
+        path: build
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
